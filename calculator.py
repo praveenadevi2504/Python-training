@@ -1,26 +1,27 @@
 import streamlit as st
+
 st.title("BASIC CALCULATOR")
-st.title("1. Addition")
-st.title("2. Subtraction")
-st.title("3. Multiplication")
-st.title("4. Division")
 
-choice = int(input("Enter your choice: "))
+st.write("### Select an Operation")
 
-a = float(input("Enter first number: "))
-b = float(input("Enter second number: "))
+choice = st.selectbox(
+    "Choose an operation:",
+    ["Addition", "Subtraction", "Multiplication", "Division"]
+)
 
-if choice == 1:
-    st.title("Addition =", a + b)
+a = st.number_input("Enter first number:", value=0.0)
+b = st.number_input("Enter second number:", value=0.0)
 
-elif choice == 2:
-    st.title("Subtraction =", a - b)
+if st.button("Calculate"):
 
-elif choice == 3:
-    st.title("Multiplication =", a * b)
+    if choice == "Addition":
+        st.success("Addition = " + str(a + b))
 
-elif choice == 4:
-    st.title("Division =", a / b)
+    elif choice == "Subtraction":
+        st.success("Subtraction = " + str(a - b))
 
-else:
-    st.title("Invalid choice")
+    elif choice == "Multiplication":
+        st.success("Multiplication = " + str(a * b))
+
+    elif choice == "Division":
+        st.success("Division = " + str(a / b))
