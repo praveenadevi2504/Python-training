@@ -10,7 +10,7 @@ choice = st.selectbox(
 )
 
 a = st.number_input("Enter first number:")
-b = st.number_input("Enter second number:", value=0.0)
+b = st.number_input("Enter second number:")
 
 if st.button("Calculate"):
 
