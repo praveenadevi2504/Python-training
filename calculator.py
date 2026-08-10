@@ -1,9 +1,9 @@
 import streamlit as st
 st.title("BASIC CALCULATOR")
-print("1. Addition")
-print("2. Subtraction")
-print("3. Multiplication")
-print("4. Division")
+st.title("1. Addition")
+st.title("2. Subtraction")
+st.title("3. Multiplication")
+st.title("4. Division")
 
 choice = int(input("Enter your choice: "))
 
@@ -11,16 +11,16 @@ a = float(input("Enter first number: "))
 b = float(input("Enter second number: "))
 
 if choice == 1:
-    print("Addition =", a + b)
+    st.title("Addition =", a + b)
 
 elif choice == 2:
-    print("Subtraction =", a - b)
+    st.title("Subtraction =", a - b)
 
 elif choice == 3:
-    print("Multiplication =", a * b)
+    st.title("Multiplication =", a * b)
 
 elif choice == 4:
-    print("Division =", a / b)
+    st.title("Division =", a / b)
 
 else:
-    print("Invalid choice")
+    st.title("Invalid choice")
